@@ -3,7 +3,7 @@ import './App.css';
 import {useState} from 'react';
 import Title from './Title';
 import Modal from './Modal';
-
+import Eventlist from './Eventlist';
 
 function App() {
   
@@ -25,12 +25,8 @@ function App() {
       {showEvents && <button onClick={()=>{setShowEvents(false)}}>hide</button>}
       
       {
-        showEvents && events.map((event, index)=>(
-          <div key={event.id}>
-            <h1 >{event.title}</h1>
-            <button onClick={()=>handleClick(event.id)}>clear event</button>
-          </div>
-        ))
+        showEvents && <Eventlist events={events} handleClick={handleClick} />//this the events property and our array of 
+        //objects are also named events hence even it is in curly braces.
       }
       <Modal/>
     </div>
