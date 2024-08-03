@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
+import Title from './Title';
+import Modal from './Modal';
+
 
 function App() {
+  
   const [showEvents,setShowEvents]= useState(true)
   const handleClick = (id)=>{
 		setEvents((preevents)=>{return preevents.filter((event)=>{
@@ -12,6 +16,7 @@ function App() {
   const [events,setEvents]= useState([{title : "marios birthday’", id: 1},{title :" ‘bowser bha’",id : 2},{title :" ‘luigi’",id:3}]) 
   return (
     <div className="App">
+    <Title/>
       {!showEvents && <button onClick={()=>{setShowEvents(true)}}>show</button>}
       {showEvents && <button onClick={()=>{setShowEvents(false)}}>hide</button>}
       
@@ -23,6 +28,7 @@ function App() {
           </div>
         ))
       }
+      <Modal/>
     </div>
   );
 }
