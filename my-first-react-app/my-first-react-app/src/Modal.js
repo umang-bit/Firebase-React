@@ -1,8 +1,9 @@
-export default function Modal() {
+export default function Modal({handleClose}) {
   return (
     <div>
       <h1>thank you for shopping with us </h1>
       <p>come again </p>
+      <button onClick={handleClose}>close </button>
     </div>
   )
 }

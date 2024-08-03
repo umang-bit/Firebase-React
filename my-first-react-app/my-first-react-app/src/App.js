@@ -13,6 +13,10 @@ function App() {
 		return id!=event.id})
 		})
 }
+  const[showModal,setShowModal]=useState(true)
+  const handleClose=()=>{
+    setShowModal(false)
+  }
   const [events,setEvents]= useState([{title : "marios birthday’", id: 1},{title :" ‘bowser bha’",id : 2},{title :" ‘luigi’",id:3}]) 
   return (
     <div className="App">
