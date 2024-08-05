@@ -28,7 +28,7 @@ function App() {
         showEvents && <Eventlist events={events} handleClick={handleClick} />//this the events property and our array of 
         //objects are also named events hence even it is in curly braces.
       }
-      <Modal/>
+      <Modal isSalesModal= {true}/>
     </div>
   );
 }

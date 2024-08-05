@@ -1,10 +1,10 @@
 
-
+import styles from './Eventlist.module.css'
 export default function Eventlist({events , handleClick}) {
   return (
     <div>
       {events.map((event, index)=>(
-          <div key={event.id}>
+          <div className = {styles.card} key={event.id}>
             <h1 >{event.title}</h1>
             <button onClick={()=>handleClick(event.id)}>clear event</button>
           </div>

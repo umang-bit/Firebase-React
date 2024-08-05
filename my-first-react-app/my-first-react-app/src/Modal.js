@@ -1,9 +1,11 @@
-export default function Modal({handleClose}) {
+export default function Modal({handleClose , isSalesModal}) {
   return (
-    <div>
+    <div style={{border : "4px solid" 
+    , borderColor :isSalesModal? "#ff4500":"black" 
+    , textAlign : 'center'}}>
       <h1>thank you for shopping with us </h1>
       <p>come again </p>
-      <button onClick={handleClose}>close </button>
+      <button onClick={handleClose} className={isSalesModal?"umang":"naive"}>close </button>
     </div>
   )
 }
