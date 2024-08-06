@@ -4,7 +4,7 @@ import {useState} from 'react';
 import Title from './Title';
 import Modal from './Modal';
 import Eventlist from './Eventlist';
-
+import Neweventform from './Neweventform';
 function App() {
   
   const [showEvents,setShowEvents]= useState(true)
@@ -29,6 +29,7 @@ function App() {
         //objects are also named events hence even it is in curly braces.
       }
       <Modal isSalesModal= {true}/>
+      <Neweventform/>
     </div>
   );
 }
