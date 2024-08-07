@@ -18,6 +18,12 @@ function App() {
     setShowModal(false)
   }
   const [events,setEvents]= useState([{title : "marios birthday’", id: 1},{title :" ‘bowser bha’",id : 2},{title :" ‘luigi’",id:3}]) 
+  const addNewEvent = (event)=>{
+      setEvents((prevEvents)=>{
+        //we know that anything passed in this handler of state function gives access to the previous states
+        return [...prevEvents,event]
+      })
+  }
   return (
     <div className="App">
     <Title/>
@@ -29,7 +35,7 @@ function App() {
         //objects are also named events hence even it is in curly braces.
       }
       <Modal isSalesModal= {true}/>
-      <Neweventform/>
+      <Neweventform addNewEvent={addNewEvent}/>
     </div>
   );
 }

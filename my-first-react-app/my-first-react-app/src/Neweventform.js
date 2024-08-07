@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export default function Neweventform() {
+export default function Neweventform({addNewEvent}) {
     const [titleInput,setTitleInput]=useState('')
     const[dateInput,setDateInput]=useState('')
     const handleSubmit = (e)=>{
@@ -11,6 +11,7 @@ export default function Neweventform() {
             date : dateInput,
             id : Math.floor(Math.random()) * 10000
         }
+        addNewEvent(event);//this is where we use the function we took form app.js
         handleReset();
     }
     const handleReset=()=>{
